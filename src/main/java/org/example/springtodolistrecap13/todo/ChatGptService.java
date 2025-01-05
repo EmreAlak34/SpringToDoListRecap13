@@ -24,7 +24,7 @@ public class ChatGPTService {
                     .bodyValue("{\"model\": \"gpt-3.5-turbo\", \"messages\": [{\"role\": \"user\", \"content\": \"Please check the spelling of this text: " + text + "\"}]}") // Der Text, den wir prüfen möchten
                     .retrieve()
                     .bodyToMono(String.class)
-                    .block(); // block() macht die Anfrage synchron, aber in einer echten Anwendung könntest du async verwenden.
+                    .block();
 
             return response;
         } catch (WebClientResponseException e) {
