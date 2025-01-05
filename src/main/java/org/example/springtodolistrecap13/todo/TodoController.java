@@ -8,9 +8,9 @@ import java.util.List;
 @RequestMapping("/api/todo")
 public class TodoController {
 
-    private final de.neuefische.todobackend.todo.TodoService todoService;
+    private final TodoService todoService;
 
-    public TodoController(de.neuefische.todobackend.todo.TodoService todoService) {
+    public TodoController(TodoService todoService) {
         this.todoService = todoService;
     }
 
